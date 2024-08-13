@@ -12,10 +12,11 @@ let loyaltyRate = 2;
 // 1
 
 app.get("/cart-total", (req, res) => {
-    let newItemPrice = parseFloat(req.query.newItemPrice);
-    let cartTotal = parseFloat(req.query.cartTotal);
-    let totalCartValue = newItemPrice + cartTotal;
-    res.send(totalCartValue.toString());
+    let productOne = parseFloat(req.query.productOne)
+    let productTwo = parseFloat(req.query.productTwo)
+    let productThree = parseFloat(req.query.productThree)
+    let cartTotal = productOne + producTwo + productThree
+    res.send(cartTotal.toString());
 });
 
 // 2
